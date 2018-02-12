@@ -12,6 +12,9 @@ class Tweet(object):
     def __cmp__(self, other):
         return other.followers() - self.followers()
 
+    def __lt__(self, other):
+        return other.followers() < self.followers()
+
     def __str__(self):
         return '@{0} ({1} followers) at {2}: '.format(
             self.raw['user']['screen_name'],
