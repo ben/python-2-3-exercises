@@ -1,3 +1,4 @@
+from builtins import str
 template = None
 import os.path
 
@@ -14,4 +15,4 @@ def load_template():
 def render(query, tweets):
     return load_template() \
         .replace('{{QUERY}}', query) \
-        .replace('{{TWEETS}}', '<hr/>'.join(unicode(t) for t in tweets))
+        .replace('{{TWEETS}}', '<hr/>'.join(str(t) for t in tweets))

@@ -1,7 +1,8 @@
+from builtins import object
 import json
 
 
-class Tweet:
+class Tweet(object):
     def __init__(self, raw):
         self.raw = raw
 
